@@ -1,0 +1,779 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  background: transparent ;
+  box-sizing: border-box;
+  transition: background 0.5s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 5400px;
+  margin: 0 auto;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85); /* fade to black */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: #ad6d4a;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff; /* visible on hero background */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #c8ad6a;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #000; /* Black bars */
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 250px;
+  height: 100%;
+  background: #c8ad6a;
+  color: #fff;
+  padding: 2rem;
+  transition: right 0.4s ease;
+  z-index: 2050;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1.5rem 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #663433;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide desktop links */
+  }
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+.hero-slideshow img {
+  position: absolute;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-slideshow img.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 2rem;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Fade Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* rooms preview section*/
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #663433;
+  margin: 0;
+}
+
+/* Rooms Section */
+.rooms {
+  padding: 5rem 2rem;
+  background: #f9f9f9;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.room-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 1.2rem;
+}
+
+.room-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #ad6d4a;
+}
+
+.room-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Explore Button */
+.explore-btn-wrapper {
+  text-align: center;
+}
+
+.explore-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 2px solid #c8ad6a;
+  color: #663433;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.explore-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: #c8ad6a;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.explore-btn:hover::before {
+  left: 0;
+}
+
+.explore-btn:hover {
+  color: #fff;
+}
+
+/* Fade-up animation (already used globally) */
+.rooms.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.rooms.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/*Park view section*/
+/* Park Section */
+.park {
+  padding: 5rem 2rem;
+  background: #fff;
+}
+
+.park-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.park-image {
+  flex: 1 1 45%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.park-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.park-image:hover img {
+  transform: scale(1.1);
+}
+
+.park-content {
+  flex: 1 1 45%;
+}
+
+.park-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #663433;
+}
+
+.park-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Reuse explore button styles */
+.park .explore-btn {
+  border: 2px solid #c8ad6a;
+  color: #663433;
+}
+
+.park .explore-btn::before {
+  background: #c8ad6a;
+}
+
+/* Fade-up effect */
+.park.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.park.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* News and updates section*/
+/* News Section */
+.news {
+  width: 100%;
+  padding: 5rem 0;
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #663433;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.news-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.news-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 500px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.news-slide.active {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.news-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-caption {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  background: rgba(102, 52, 51, 0.7);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.news-caption h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.news-caption p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Arrows */
+.news-prev, .news-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(200, 173, 106, 0.9); /* gold tone */
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.news-prev:hover, .news-next:hover {
+  background: #663433;
+}
+
+.news-prev {
+  left: 20px;
+}
+
+.news-next {
+  right: 20px;
+}
+
+/* Fade-up */
+.news.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.news.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-slide {
+    height: 300px;
+  }
+
+  .news-caption {
+    bottom: 20px;
+    left: 20px;
+    max-width: 250px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+.news-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: 500px; /* ✅ ensures images show */
+}
+
+
+
+
+
+
+/* half text section*/
+/* Wellness Section */
+.wellness {
+  padding: 5rem 2rem;
+  background: #f9f9f9;
+}
+
+.wellness-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image Side */
+.wellness-image {
+  flex: 1 1 50%;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  height: 400px; /* ✅ give container height */
+}
+
+@media (max-width: 768px) {
+  .wellness-image {
+    height: 500px; /* smaller for mobile */
+  }
+}
+
+.wellness-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row; /* ✅ ensures text left, image right */
+}
+
+@media (max-width: 900px) {
+  .wellness-container {
+    flex-direction: column; /* ✅ stacks vertically on mobile */
+  }
+}
+
+
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+
+.image-slider img.active {
+  opacity: 1;
+}
+
+.image-overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(102, 52, 51, 0.7); /* brand color w/ transparency */
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+}
+
+.image-overlay-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Text Side */
+.wellness-content {
+  flex: 1 1 45%;
+}
+
+.wellness-content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: #663433;
+}
+
+.wellness-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Button reuse */
+.wellness .explore-btn {
+  border: 2px solid #c8ad6a;
+  color: #663433;
+}
+
+.wellness .explore-btn::before {
+  background: #c8ad6a;
+}
+
+/* Fade-up */
+.wellness.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.wellness.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wellness-container {
+    flex-direction: column;
+  }
+
+  .wellness-image, .wellness-content {
+    flex: 1 1 100%;
+  }
+
+  .image-overlay-text {
+    bottom: 15px;
+    left: 15px;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+/* footer with quick links*/
+/* Footer Section */
+/* Footer Section */
+.footer {
+  background: #191818;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo-img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #c8ad6a;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #c8ad6a;
+}
+
+.footer-contact p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* Fade-up */
+.footer.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.footer.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links, 
+  .footer-contact {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .footer-links ul li {
+    margin: 0.5rem 0;
+  }
+}
+
+
+
+
+
+
+
+
+

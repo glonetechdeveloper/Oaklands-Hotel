@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oaklands Hotel | Park & Diner</title>
+  <link rel="stylesheet" href="./park.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar nav-container" id="navbar">
+    <a href="index.html" class="logo">
+      <img src="./Oaklands hotel logo.png" alt="The Oaklands Logo">
+      <span class="logo-text">Oaklands Hotel & Park</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>  
+      <li><a href="./rooms.html">Rooms</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <ul>
+      <li><a href="./index.html">Home</a></li>  
+      <li><a href="./rooms.html">Rooms</a></li>
+      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-slideshow">
+      <img src="./bar 2.jpg" alt="Hero Image 1" class="active">
+      <img src="./Dining 1.jpg" alt="Hero Image 2">
+      <img src="./conference(podium).jpg" alt="Hero Image 3">
+    </div>
+    <div class="hero-overlay">
+      <h1 class="fade-up">Our Park | Diner | Bar | Gym & Conference rooms</h1>
+    </div>
+  </section>
+
+  <!--Park View-->
+  <section class="park-section fade-up">
+  <div class="park-content">
+    <!-- Carousel on the left -->
+    <div class="park-carousel">
+      <div class="carousel-images">
+        <img src="./outside.png" class="active" alt="Park view 1">
+        <img src="./pool.jpg" alt="Park view 2">
+        <img src="./reception.jpg" alt="Park view 3">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Text on the right -->
+    <div class="park-text">
+      <h2>Discover the Park Views</h2>
+      <p>
+        Nestled in the heart of nature, our hotel offers stunning park views 
+        that create the perfect balance of relaxation and inspiration. 
+        Take in the lush greenery, the calm breeze, and a peaceful environment 
+        right from your window.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!--Conference hall-->
+<section class="conference-section fade-up">
+  <div class="conference-content">
+    <!-- Text on the left -->
+    <div class="conference-text">
+      <h2>Conference Hall</h2>
+      <p>
+        Our modern conference hall is equipped with state-of-the-art facilities, 
+        making it the ideal venue for business meetings, events, and gatherings. 
+        Designed with comfort and professionalism in mind, it provides the perfect 
+        balance between elegance and functionality.
+      </p>
+    </div>
+
+    <!-- Carousel on the right -->
+    <div class="conference-carousel">
+      <div class="carousel-images">
+        <img src="./conference(podium).jpg" class="active" alt="Conference hall view 1">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!--Diner and Bar-->
+  <section class="diner-bar-section fade-up">
+  <div class="diner-bar-content">
+    <div class="diner-bar-carousel">
+      <div class="carousel-images">
+        <img src="./Dining 1.jpg" class="active" alt="Diner view 1">
+        <img src="./bar 1.jpg" alt="Diner view 2">
+        <img src="./dining 2.jpg" alt="Diner view 3">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+      <div class="carousel-dots"></div>
+    </div>
+    <div class="diner-bar-text">
+      <h2>Flavors That Tell a Story</h2>
+      <p>
+        Indulge in a dining experience that blends timeless elegance with local flavor. 
+        Our diner and bar offer an inviting atmosphere, where every meal and cocktail 
+        carries the story of The Oaklands.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="gym-section fade-up">
+  <div class="gym-content">
+    <!-- Text on the left -->
+    <div class="gym-text">
+      <h2>Stay Active, Stay Inspired</h2>
+      <p>
+        Our state-of-the-art gym is designed to keep you energized throughout your stay. 
+        Featuring modern equipment, open space for functional training, and a calm 
+        atmosphere overlooking the park, it’s the perfect place to refresh your body and mind.
+      </p>
+    </div>
+
+    <!-- Carousel on the right -->
+    <div class="gym-carousel">
+      <div class="carousel-images">
+        <img src="./gym 1.jpg" class="active" alt="Gym view 1">
+        <img src="./gym 2.jpg" alt="Gym view 2">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+      <div class="carousel-dots"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="footer fade-up" id="footer">
+  <div class="footer-container">
+    <!-- Logo / Hotel Name -->
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="./Oaklands hotel logo.png" alt="The Oaklands Logo" class="footer-logo-img">
+      </a>
+      <p>A serene escape into nature and comfort.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p><strong>Phone:</strong> +1 (234) 567-890</p>
+      <p><strong>Address:</strong> 123 Oaklands Park, Green Valley</p>
+      <p><strong>Check-in:</strong> 3:00 PM – 10:00 PM</p>
+      <p><strong>Check-out:</strong> 11:00 AM</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+  <script src="./park.js"></script>
+</body>
+</html>

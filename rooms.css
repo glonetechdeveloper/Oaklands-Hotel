@@ -1,0 +1,604 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.5s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.85); /* fade to black */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  color: #ad6d4a;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #c8ad6a;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 250px;
+  height: 100%;
+  background: #c8ad6a;
+  color: #fff;
+  padding: 2rem;
+  transition: right 0.4s ease;
+  z-index: 2050;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1.5rem 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #663433;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide desktop links */
+  }
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+}
+
+/* Hero Section */
+.hero-rooms {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-slider img.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+
+
+/* Section Styling for room types */
+.rooms-section {
+  padding: 6rem 2rem;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #555;
+}
+
+/* Grid Layout */
+.rooms-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.rooms-grid.single {
+  justify-content: center;
+}
+
+/* Room Card */
+.room-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  flex: 1 1 45%;
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+.room-info {
+  padding: 1.5rem;
+}
+
+.room-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.room-info p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.carousel-images img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+}
+
+/* Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.carousel-dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots span.active {
+  background: #c8ad6a;
+}
+
+.explore-btn-wrapper {
+  text-align: center;
+}
+
+.explore-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 2px solid #c8ad6a;
+  color: #663433;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.explore-btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: #c8ad6a;
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.explore-btn:hover::before {
+  left: 0;
+}
+
+.explore-btn:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rooms-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* Amenities Section */
+.amenities-section {
+  padding: 6rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.amenities-section .section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.amenities-section .section-header p {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Grid */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Flip Card */
+.amenity-card {
+  width: 100%;
+  max-width: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.amenity-card:hover .card-inner,
+.amenity-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f8f8f8;
+  transition: transform 0.3s ease;
+}
+
+/* Front */
+.card-front img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.card-front h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Back */
+.card-back {
+  transform: rotateY(180deg);
+  background: #663433;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  padding: 2rem;
+}
+
+/* Fade-up animation */
+.amenities-section.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.amenities-section.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+/*footer*/
+/* footer with quick links*/
+/* Footer Section */
+/* Footer Section */
+.footer {
+  background: #191818;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo-img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #c8ad6a;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #c8ad6a;
+}
+
+.footer-contact p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* Fade-up */
+.footer.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.footer.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links, 
+  .footer-contact {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .footer-links ul li {
+    margin: 0.5rem 0;
+  }
+}
+
+
+
+

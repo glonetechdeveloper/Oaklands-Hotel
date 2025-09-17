@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oaklands Hotel| Rooms</title>
+  <link rel="stylesheet" href="./rooms.css">
+  <script defer src="./rooms.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="./Oaklands hotel logo.png" alt="The Oaklands Logo" class="logo-img">
+        <span class="logo-text">Oaklands Hotel & Park</span>
+      </a>
+
+      <!-- Links -->
+      <nav class="nav-links">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./park.html">Park & Diner</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./park.html">Park & Diner</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-rooms">
+    <div class="hero-slider">
+      <img src="./room 1.jpg" alt="Hero 1" class="active">
+      <img src="./room 2.jpg" alt="Hero 2">
+      <img src="./room 3.png" alt="Hero 3">
+    </div>
+    <div class="hero-overlay">
+      <h1 class="fade-up">Our Rooms & Suites</h1>
+      <p class="fade-up">Discover luxury, comfort, and elegance at The Oaklands</p>
+    </div>
+  </section>
+
+
+
+  <!-- Elegant Comfort Section -->
+<section class="rooms-section fade-up">
+  <div class="section-header">
+    <h2>Elegant Comfort, Thoughtfully Designed</h2>
+    <p>Discover our unique rooms, crafted with timeless design, luxurious amenities, and serene surroundings.</p>
+  </div>
+
+  <div class="rooms-grid">
+    <!-- Room 1 -->
+    <div class="room-card">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="./room 1.jpg" class="active" alt="Room 1A">
+          <img src="./room 2.jpg" alt="Room 1B">
+          <img src="./room 3.jpg" alt="Room 1C">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="room-info">
+        <h3>Classic Suite</h3>
+        <p>A perfect blend of elegance and comfort with park views and luxurious interiors.</p>
+      </div>
+    </div>
+
+    <!-- Room 2 -->
+    <div class="room-card">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="./room 2.jpg" class="active" alt="Room 2A">
+          <img src="./room 3.jpg" alt="Room 2B">
+          <img src="./room 1.jpg" alt="Room 2C">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="room-info">
+        <h3>Superior Suite</h3>
+        <p>Spacious living with premium amenities, designed for luxury and relaxation.</p>
+      </div>
+    </div>
+
+    <!-- Third room (centered) -->
+   <div class="rooms-grid single">
+     <div class="room-card">
+       <div class="carousel">
+        <div class="carousel-images">
+          <img src="./room 3.jpg" class="active" alt="Room 3A">
+          <img src="./room 1.jpg" alt="Room 3B">
+          <img src="./room 2.jpg" alt="Room 3C">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+       </div>
+      <div class="room-info">
+        <h3>Executive Suite</h3>
+        <p>The ultimate Oaklands experience — expansive, refined, and perfectly crafted for unforgettable stays.</p>
+      </div>
+    </div>
+   </div>
+
+   <!-- Third room (centered) -->
+   <div class="rooms-grid single">
+    <div class="room-card">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="./stairway.png" class="active" alt="Room 3A">
+          <img src="./room 3.jpg" alt="Room 3B">
+          <img src="./room 1.jpg" alt="Room 3C">
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+      </div>
+      <div class="room-info">
+        <h3>Presidential Suite</h3>
+        <p>The ultimate Oaklands experience — expansive, refined, and perfectly crafted for unforgettable stays.</p>
+      </div>
+    </div>
+   </div>
+  </div>
+
+  
+  <div class="explore-btn-wrapper">
+    <a href="./contact.html" class="explore-btn">Contact Us</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Room Amenities Section -->
+<section class="amenities-section fade-up">
+  <div class="section-header">
+    <h2>Room Amenities</h2>
+    <p>Enjoy thoughtfully curated amenities to make your stay as comfortable and memorable as possible.</p>
+  </div>
+
+  <div class="amenities-grid">
+    <!-- Amenity Card 1 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-wi-fi-100.png" alt="Wi-Fi">
+          <h3>Wi-Fi</h3>
+        </div>
+        <div class="card-back">
+          <p>Stay connected throughout your stay with complimentary high-speed internet access.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 2 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-tv-show-100.png" alt="TV">
+          <h3>TV</h3>
+        </div>
+        <div class="card-back">
+          <p>Relax with premium channels, streaming services, and on-demand entertainment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 3 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-bed-100.png" alt="Luxury Bedding">
+          <h3>Luxury Bedding</h3>
+        </div>
+        <div class="card-back">
+          <p>Experience restful sleep with plush bedding, premium linens, and cozy comforters.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 4 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-electric-teapot-100.png" alt="Electric Kettle">
+          <h3>Electric Kettle</h3>
+        </div>
+        <div class="card-back">
+          <p>Wake up refreshed with freshly brewed coffee right in your room.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 5 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-dining-room-100.png" alt="Dining">
+          <h3>Mini Dining</h3>
+        </div>
+        <div class="card-back">
+          <p>Wake up refreshed with freshly brewed coffee right in your room.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 6 -->
+     
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-sitting-on-chair-100.png" alt="Sitting Area">
+          <h3>Sitting Area</h3>
+        </div>
+        <div class="card-back">
+          <p>Wake up refreshed with freshly brewed coffee right in your room.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amenity Card 7 -->
+    <div class="amenity-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./icons8-air-100.png" alt="Air Conditioning">
+          <h3>Air Conditioning</h3>
+        </div>
+        <div class="card-back">
+          <p>Wake up refreshed with freshly brewed coffee right in your room.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="footer fade-up" id="footer">
+  <div class="footer-container">
+    <!-- Logo / Hotel Name -->
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="./Oaklands hotel logo.png" alt="The Oaklands Logo" class="footer-logo-img">
+      </a>
+      <p>A serene escape into nature and comfort.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./park.html">Park & Diner</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p><strong>Phone:</strong> +1 (234) 567-890</p>
+      <p><strong>Address:</strong> 123 Oaklands Park, Green Valley</p>
+      <p><strong>Check-in:</strong> 3:00 PM – 10:00 PM</p>
+      <p><strong>Check-out:</strong> 11:00 AM</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
