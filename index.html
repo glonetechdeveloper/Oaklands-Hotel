@@ -12,16 +12,17 @@
   <!-- Navbar -->
   <nav class="navbar nav-container" id="navbar">
     <a href="index.html" class="logo">
-      <img src="./Oaklands hotel logo.png" alt="The Oaklands Logo">
-      <span class="logo-text">Oaklands Hotel & Park</span>
+      <img src="./OAKLANDS SINGLE LOGO.png" alt="The Oaklands Logo">
+      <span class="logo-text">Oaklands Hotel</span>
     </a>
 
     <!-- Desktop Links -->
     <ul class="nav-links">
       <li><a href="./rooms.html">Rooms</a></li>
-      <li><a href="./park.html">Park & Diner</a></li>
+      <li><a href="./actualpark.html">Park</a></li>
       <li><a href="./gallery.html">Gallery</a></li>
       <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./park.html">Diner</a></li>
     </ul>
 
     <!-- Mobile Hamburger -->
@@ -37,21 +38,23 @@
     <button class="close-btn" id="close-btn">&times;</button>
     <ul>
       <li><a href="./rooms.html">Rooms</a></li>
-      <li><a href="./park.html">Park & Diner</a></li>
+      <li><a href="./actualpark.html">Park</a></li>
       <li><a href="./gallery.html">Gallery</a></li>
       <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./park.html">Diner</a></li>
     </ul>
   </aside>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-slideshow">
-      <img src="./pool.jpg" alt="Hero Image 1" class="active">
-      <img src="./parlour 1.png" alt="Hero Image 2">
-      <img src="./outside.png" alt="Hero Image 3">
+      <div class="slide active"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
     </div>
     <div class="hero-overlay">
-      <h1 class="fade-up">Welcome to Oaklands Hotel & Park</h1>
+      <h1 class="fade-up">Welcome to Oaklands Hotel</h1>
+      <p class="fade-up">The Park View</p>
     </div>
   </section>
 
@@ -69,34 +72,34 @@
 
   <div class="rooms-grid">
     <div class="room-card">
-      <img src="./room 1.jpg" alt="Luxury Suite">
+      <img src="./classic 1.jpg" alt="Luxury Suite">
       <div class="room-info">
-        <h3>Luxury Suite</h3>
-        <p>Spacious suite with modern amenities and a stunning view.</p>
+        <h3>Classic Suite</h3>
+        <p>The Classic Room blends cozy charm with modern essentials, providing a warm, inviting space designed for comfort and relaxation.</p>
       </div>
     </div>
 
     <div class="room-card">
-      <img src="./room 2.jpg" alt="Deluxe Room">
+      <img src="./superior 1.jpg" alt="Deluxe Room">
       <div class="room-info">
-        <h3>Deluxe Room</h3>
-        <p>Comfortable and stylish room designed for relaxation.</p>
+        <h3>Superior Room</h3>
+        <p>Our Superior Room offers a perfect balance of comfort and style, featuring elegant décor, thoughtful amenities, and a serene setting for a truly relaxing stay.</p>
       </div>
     </div>
 
     <div class="room-card">
-      <img src="./room 3.jpg" alt="Executive Room">
+      <img src="./executive 1.jpg" alt="Executive Room">
       <div class="room-info">
         <h3>Executive Room</h3>
-        <p>Ideal for business travelers with premium features.</p>
+        <p>The Executive Suite combines modern elegance with refined comfort, offering generous space, stylish furnishings, and exclusive amenities for both business and leisure.</p>
       </div>
     </div>
 
     <div class="room-card">
-      <img src="./room 3.png" alt="Family Room">
+      <img src="./presidential 1.jpg" alt="Family Room">
       <div class="room-info">
-        <h3>Family Room</h3>
-        <p>Perfect choice for families with ample space and comfort.</p>
+        <h3>Presidential Room</h3>
+        <p>Our Presidential Suite redefines luxury with spacious interiors, elegant design, premium amenities, and breathtaking views—crafted for the ultimate comfort and exclusivity.</p>
       </div>
     </div>
   </div>
@@ -112,18 +115,113 @@
 <section class="park fade-up" id="park">
   <div class="park-container">
     <div class="park-image">
-      <img src="./pool.jpg" alt="The Oaklands Park View">
+      <img src="./roller coaster.jpg" alt="The Oaklands Park View">
     </div>
     <div class="park-content">
-      <h2>Our Park View</h2>
+      <h2>The Park View</h2>
       <p>
-        Nestled within a serene natural setting, The Oaklands offers breathtaking views of lush greenery and peaceful landscapes. 
+        Nestled within a serene natural setting, Oaklands Hotel offers breathtaking views of lush greenery and peaceful landscapes. 
         Whether you're enjoying your morning coffee or an evening stroll, the park provides a perfect escape into nature.
       </p>
-      <a href="./park.html" class="explore-btn">Discover More</a>
+      <a href="./actualpark.html" class="explore-btn">Discover More</a>
     </div>
   </div>
 </section>
+
+
+<!--conference and gym-->
+<section class="services-section">
+  <div class="service-card">
+    <img src="./conference(podium).jpg" alt="Conference Hall">
+    <h3>Conference Room</h3>
+    <p>
+      Modern venues with advanced technology and seamless service, 
+      ideal for meetings, workshops, and corporate events.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <img src="./gym 1.jpg" alt="Hotel Gym">
+    <h3>Gym</h3>
+    <p>
+      Stay fit and energized in our modern gym, 
+      equipped with premium machines and a refreshing environment.
+    </p>
+  </div>
+</section>
+
+
+<!-- Location section -->
+<section id="location" class="location-section fade-up">
+  <div class="container">
+    <h2 class="location-title">Location</h2>
+    <p class="location-lead">
+      Located in the city center, this hotel is within easy reach of shopping, sports and parks.
+      Below you’ll find important nearby places and an interactive map.
+    </p>
+
+    <div class="location-grid">
+      <!-- Left: What's nearby -->
+      <div class="nearby-column" aria-labelledby="nearby-heading">
+        <div class="nearby-tab">What's nearby</div>
+
+        <ul class="nearby-list" id="nearby-list">
+          <li>
+            <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span class="place">Polo Park Mall</span>
+            <span class="distance">0.9 mi (1.4 km)</span>
+          </li>
+
+          <li>
+            <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span class="place">Nnamdi Azikiwe Stadium</span>
+            <span class="distance">1.0 mi (1.6 km)</span>
+          </li>
+
+          <li>
+            <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span class="place">Enugu Golf Course</span>
+            <span class="distance">1.3 mi (2.0 km)</span>
+          </li>
+
+          <li>
+            <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span class="place">Miliken Hill</span>
+            <span class="distance">3.5 mi (5.6 km)</span>
+          </li>
+
+          <li>
+            <svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+            <span class="place">National Museum (Enugu)</span>
+            <span class="distance">~6–10 km (by car)</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Google Map -->
+      <div class="map-column" aria-hidden="false">
+        <!-- Google Maps iframe centered on the hotel address -->
+        <div class="map-frame">
+          <iframe
+            title="Oaklands Hotel Enugu - map"
+            src="https://www.google.com/maps?q=Tunnel%20Crossing%2C%20Ogui%20Link%20Road%2C%20Beside%20Elim%20Plaza%2C%20Enugu%2C%20Enugu%2C%20Nigeria&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Directions link (opens Google Maps directions) -->
+        <div class="map-actions">
+          <a class="map-directions" href="https://www.google.com/maps/dir/?api=1&destination=Tunnel+Crossing,+Ogui+Link+Road,+Beside+Elim+Plaza,+Enugu,+Enugu,+Nigeria" target="_blank" rel="noopener">
+            Get directions ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -139,8 +237,8 @@
     <div class="wellness-content">
       <h2>A Space to Find Your Balance</h2>
       <p>
-        The Oaklands is more than just a place to stay. Our tranquil spaces are designed to help you
-        reconnect with nature and yourself. Unwind in comfort, surrounded by the beauty of our park view.
+        Oaklands Hotel is more than just a place to stay. Our tranquil spaces are designed to help you
+        reconnect with nature and yourself. Unwind in comfort, surrounded by the beauty of The Park View.
       </p>
       <a href="./contact.html" class="explore-btn">Learn More</a>
     </div>
@@ -148,7 +246,7 @@
     <!-- Image Side (now on right) -->
     <div class="wellness-image">
       <div class="image-slider">
-        <img src="./room 1.jpg" alt="Wellness 1" class="active">
+        <img src="./carousel.jpg" alt="Wellness 1" class="active">
         <img src="./pool.jpg" alt="Wellness 2">
         <img src="./bar 1.jpg" alt="Wellness 3">
       </div>
@@ -180,19 +278,18 @@
       <h3>Quick Links</h3>
       <ul>
         <li><a href="./rooms.html">Rooms</a></li>
-        <li><a href="./park.html">Park & Diner</a></li>
+        <li><a href="./actualpark.html">Park</a></li>
         <li><a href="./gallery.html">Gallery</a></li>
         <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./park.html">Diner</a></li>
       </ul>
     </div>
 
     <!-- Contact Info -->
     <div class="footer-contact">
       <h3>Contact Info</h3>
-      <p><strong>Phone:</strong> +1 (234) 567-890</p>
-      <p><strong>Address:</strong> 123 Oaklands Park, Green Valley</p>
-      <p><strong>Check-in:</strong> 3:00 PM – 10:00 PM</p>
-      <p><strong>Check-out:</strong> 11:00 AM</p>
+      <p><strong>Phone:</strong>+2348099909931, +2348038724725</p>
+      <p><strong>Address:</strong> Iva-Valley Road Unnel Crossing Road, Ogui Link road, Beside Elim Plaza, Enugu</p>
     </div>
   </div>
 </footer>

@@ -183,25 +183,25 @@ body {
 
 /* ✅ Desktop background images (landscape) */
 .slide:nth-child(1) {
-  background-image: url("./Dining\ 1.jpg");
+  background-image: url("./carousel.jpg");
 }
 .slide:nth-child(2) {
-  background-image: url("./bar\ 1.jpg");
+  background-image: url("./coffecup\ desktop.jpg");
 }
 .slide:nth-child(3) {
-  background-image: url("./dining\ 3.jpg");
+  background-image: url("./pirate\ ship.jpg");
 }
 
 /* ✅ Mobile background images (portrait) */
 @media (max-width: 768px) {
   .slide:nth-child(1) {
-    background-image: url("./Dining\ 1.jpg");
+    background-image: url("./carousel.jpg");
   }
   .slide:nth-child(2) {
-    background-image: url("./bar\ 1.jpg");
+    background-image: url("./coffecup\ desktop.jpg");
   }
   .slide:nth-child(3) {
-    background-image: url("./dining\ 3.jpg");
+    background-image: url("./pirate\ ship.jpg");
   }
 }
 
@@ -887,4 +887,12 @@ body {
   .footer-links ul li {
     margin: 0.5rem 0;
   }
+}
+
+#innit{
+    text-align: center;
+    font-size: 40px;
+}
+#cant{
+    font-size: 20px;
 }

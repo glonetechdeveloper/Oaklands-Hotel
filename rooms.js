@@ -19,6 +19,21 @@ function changeHeroSlide() {
 }
 setInterval(changeHeroSlide, 6000);
 
+
+//omo i just dey add am
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("active");
+  }
+
+  setInterval(showNextSlide, 5000); // change every 5s
+});
+
 // Fade-up on scroll
 const fadeUps = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver(entries => {
