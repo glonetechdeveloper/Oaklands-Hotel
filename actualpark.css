@@ -654,6 +654,447 @@ body {
 
 
 
+/* Roller Coaster Section */
+.roller-section {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.roller-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel Container */
+/* Carousel Container */
+.roller-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  /* aspect-ratio can cause collapse issues on some mobiles */
+  width: 100%;
+  height: 350px; /* ✅ default height */
+}
+
+/* Images */
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ ensures full coverage */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+}
+
+/* Responsive override */
+@media (max-width: 768px) {
+  .roller-carousel {
+    height: 250px; /* ✅ smaller but visible height on mobile */
+    max-width: 100%;
+  }
+}
+
+
+/* Navigation Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Navigation Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #c8ad6a; /* ✅ from your logo color */
+}
+
+/* Text */
+.roller-text {
+  flex: 1 1 45%;
+}
+
+.roller-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.roller-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .roller-content {
+    flex-direction: column;
+  }
+  .roller-carousel,
+  .roller-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.roller-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
+}
+
+
+
+/* children stuffed animals Section */
+.children-section {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.children-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel Container */
+/* Carousel Container */
+.children-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  /* aspect-ratio can cause collapse issues on some mobiles */
+  width: 100%;
+  height: 350px; /* ✅ default height */
+}
+
+/* Images */
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ ensures full coverage */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+}
+
+/* Responsive override */
+@media (max-width: 768px) {
+  .children-carousel {
+    height: 250px; /* ✅ smaller but visible height on mobile */
+    max-width: 100%;
+  }
+}
+
+
+/* Navigation Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Navigation Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #c8ad6a; /* ✅ from your logo color */
+}
+
+/* Text */
+.children-text {
+  flex: 1 1 45%;
+}
+
+.children-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.children-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .children-content {
+    flex-direction: column;
+  }
+  .children-carousel,
+  .children-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.children-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
+}
+
+
+
+
+/* coffee cup Section */
+.coffee-section {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.coffee-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel Container */
+/* Carousel Container */
+.coffee-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  /* aspect-ratio can cause collapse issues on some mobiles */
+  width: 100%;
+  height: 350px; /* ✅ default height */
+}
+
+/* Images */
+.carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ ensures full coverage */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-images img.active {
+  opacity: 1;
+}
+
+/* Responsive override */
+@media (max-width: 768px) {
+  .coffee-carousel {
+    height: 250px; /* ✅ smaller but visible height on mobile */
+    max-width: 100%;
+  }
+}
+
+
+/* Navigation Arrows */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* Navigation Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #c8ad6a; /* ✅ from your logo color */
+}
+
+/* Text */
+.coffee-text {
+  flex: 1 1 45%;
+}
+
+.coffee-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.coffee-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .coffee-content {
+    flex-direction: column;
+  }
+  .coffee-carousel,
+  .coffee-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.coffee-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
+}
+
+
+
+
+
+
+
+
 /* ==========================
    Gym Section
 ========================== */
@@ -788,6 +1229,277 @@ body {
   aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
 }
 
+
+
+/* ==========================
+   Video Games Section
+========================== */
+.video-section {
+  padding: 80px 5%;
+  background: #ebe9e9;
+}
+
+.video-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+.video-text {
+  flex: 1 1 45%;
+}
+
+.video-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.video-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Carousel */
+.video-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+.video-carousel .carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-carousel .carousel-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.video-carousel .carousel-images img.active {
+  opacity: 1;
+}
+
+/* Arrows */
+.video-carousel .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.video-carousel .carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.video-carousel .carousel-btn.prev { left: 10px; }
+.video-carousel .carousel-btn.next { right: 10px; }
+
+/* Dots */
+.video-carousel .carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.video-carousel .carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.video-carousel .carousel-dots button.active {
+  background: #c8ad6a; /* brand gold */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .video-content {
+    flex-direction: column-reverse; /* ✅ carousel stacks under text */
+  }
+  .video-carousel,
+  .video-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .video-carousel { height: 250px; }
+}
+
+.video-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
+}
+
+
+
+/* ==========================
+   Bumper cars Section
+========================== */
+.bumper-section {
+  padding: 80px 5%;
+  background: #ebe9e9;
+}
+
+.bumper-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+.bumper-text {
+  flex: 1 1 45%;
+}
+
+.bumper-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Roboto', serif;
+  font-weight: 700;
+}
+
+.bumper-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Carousel */
+.bumper-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+.bumper-carousel .carousel-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bumper-carousel .carousel-images img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.bumper-carousel .carousel-images img.active {
+  opacity: 1;
+}
+
+/* Arrows */
+.bumper-carousel .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.bumper-carousel .carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.bumper-carousel .carousel-btn.prev { left: 10px; }
+.bumper-carousel .carousel-btn.next { right: 10px; }
+
+/* Dots */
+.bumper-carousel .carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.bumper-carousel .carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bumper-carousel .carousel-dots button.active {
+  background: #c8ad6a; /* brand gold */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bumper-content {
+    flex-direction: column-reverse; /* ✅ carousel stacks under text */
+  }
+  .bumper-carousel,
+  .bumper-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .bumper-carousel { height: 250px; }
+}
+
+.bumper-carousel {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3; /* ✅ Keeps 4:3 shape */
+}
 
 
 
