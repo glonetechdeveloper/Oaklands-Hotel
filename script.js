@@ -1,56 +1,40 @@
-const hamburger = document.getElementById('hamburger');
-const sidebar = document.getElementById('sidebar');
-const closeBtn = document.getElementById('close-btn');
+
 
 // Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
   if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
+    navbar.classList.add("scrolled");
   } else {
-    navbar.classList.remove('scrolled');
+    navbar.classList.remove("scrolled");
   }
 });
 
-// Toggle sidebar
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-  hamburger.classList.toggle('open');
-
-  const spans = hamburger.querySelectorAll('span');
-  if (hamburger.classList.contains('open')) {
-    spans[0].style.transform = 'rotate(45deg) translateY(8px)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
-  } else {
-    spans.forEach(span => {
-      span.style.transform = '';
-      span.style.opacity = '1';
-    });
-  }
-});
-
-// Close sidebar
-closeBtn.addEventListener('click', () => {
-  sidebar.classList.remove('active');
-  hamburger.classList.remove('open');
-  hamburger.querySelectorAll('span').forEach(span => {
-    span.style.transform = '';
-    span.style.opacity = '1';
-  });
-});
-
-// Hero Slideshow
-const slides = document.querySelectorAll('.hero-slideshow img');
+// Hero slideshow
 let currentSlide = 0;
-
-function showNextSlide() {
-  slides[currentSlide].classList.remove('active');
+function showSlides() {
+  const slides = document.querySelectorAll(
+    window.innerWidth <= 768 ? ".portrait .bw-slide" : ".landscape .bw-slide"
+  );
+  slides.forEach(slide => slide.classList.remove("active"));
   currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
+  slides[currentSlide].classList.add("active");
 }
+setInterval(showSlides, 5000);
 
-setInterval(showNextSlide, 6000);
+// Sidebar toggle
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+
+hamburger.addEventListener("click", () => {
+  sidebar.classList.add("active");
+});
+
+closeSidebar.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
+
 
 
 //omo i just dey add am
@@ -210,3 +194,9 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   }
 });
+
+
+
+
+
+

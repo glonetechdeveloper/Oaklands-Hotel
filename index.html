@@ -6,57 +6,74 @@
  <title> Oaklands Hotel | Home</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar nav-container" id="navbar">
-    <a href="index.html" class="logo">
+  <!-- HEADER -->
+  <header class="bw-header">
+    <!-- NAVBAR -->
+    <nav class="bw-navbar" id="navbar">
+      <div class="bw-logo">
+        <a href="index.html" class="logo">
       <img src="./OAKLANDS SINGLE LOGO.png" alt="The Oaklands Logo">
       <span class="logo-text">Oaklands Hotel</span>
     </a>
+      </div>
 
-    <!-- Desktop Links -->
-    <ul class="nav-links">
-      <li><a href="./rooms.html">Rooms</a></li>
-      <li><a href="./actualpark.html">Park</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="./park.html">Diner</a></li>
-    </ul>
+      <ul class="bw-nav-links">
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="./actualpark.html">Park</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./park.html">Diner</a></li>
+      </ul>
 
-    <!-- Mobile Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+      <!-- HAMBURGER -->
+      <div class="bw-hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <button class="close-btn" id="close-btn">&times;</button>
-    <ul>
-      <li><a href="./rooms.html">Rooms</a></li>
-      <li><a href="./actualpark.html">Park</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-      <li><a href="./park.html">Diner</a></li>
-    </ul>
-  </aside>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-slideshow">
-      <div class="slide active"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
+    <!-- SIDEBAR -->
+    <div class="bw-sidebar" id="sidebar">
+      <button class="bw-close" id="closeSidebar">&times;</button>
+      <ul>
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="./actualpark.html">Park</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./park.html">Diner</a></li>
+      </ul>
     </div>
-    <div class="hero-overlay">
-      <h1 class="fade-up">Welcome to Oaklands Hotel</h1>
-      <p class="fade-up">The Park View</p>
-    </div>
-  </section>
+
+    <!-- HERO -->
+    <section class="bw-hero">
+      <div class="bw-slides landscape">
+        <img src="./building.jpg" class="bw-slide active" alt="">
+        <img src="./reception.jpg" class="bw-slide" alt="">
+        <img src="./Dining 1.jpg" class="bw-slide" alt="">
+        <img src="./desktop green bed.jpg" class="bw-slide" alt="">
+        <img src="./lounge 1.jpg" class="bw-slide" alt="">
+      </div>
+      <div class="bw-slides portrait">
+        <img src="./building.jpg" class="bw-slide active" alt="">
+        <img src="./reception.jpg" class="bw-slide" alt="">
+        <img src="./Dining 1.jpg" class="bw-slide" alt="">
+        <img src="./mobile green.jpg" class="bw-slide" alt="">
+        <img src="./lounge 1.jpg" class="bw-slide" alt="">
+      </div>
+
+      <div class="bw-hero-overlay"></div>
+
+      <div class="bw-hero-text">
+        <h1 class="fade-up">Welcome to Oaklands Hotel</h1>
+        <p class="fade-up">The Park View</p>
+      </div>
+    </section>
+  </header>
 
 
     <!-- Elegant Comfort Section -->
@@ -145,7 +162,7 @@
 <!--conference and gym-->
 <section class="services-section">
   <div class="service-card">
-    <img src="./conference(podium).jpg" alt="Conference Hall">
+    <img src="./conference room 2.jpg" alt="Conference Hall">
     <h3>Conference Room</h3>
     <p>
      Planning a business meeting or a grand celebration? Our state-of-the-art conference rooms(seating 200 guests) and massive event center (seating up to 500 guests) are designed to host anything from board meetings to weddings, exhibitions, and concerts with professional support and high-end equipment to ensure every event runs flawlessly
@@ -300,9 +317,15 @@
     <!-- Contact Info -->
     <div class="footer-contact">
       <h3>Contact Info</h3>
-      <p><strong>Phone:</strong>+2348099909931, +2348038724725</p>
+      <p><strong>Phone:</strong>+2348099909931, +2348099909936, +2347072407067</p>
       <p><strong>Address:</strong>No 2 ebeano tunnel crossing road, near Elim plaza, Enugu.</p>
     </div>
+    <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/oaklandshotelenugu?igsh=Y3oza3QwMjNvcnVn" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@oaklandshotelenugu?_t=ZS-907u8UJw4ck&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1BQUM7C4XR/" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
   </div>
 </footer>
 
